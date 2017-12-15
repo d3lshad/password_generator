@@ -44,6 +44,23 @@ namespace password_generator
 
             while (again)
             {
+
+
+                // fixed windows size
+                Console.Title = "Password Generator";
+                Console.ResetColor();
+                Console.Clear();
+                Console.SetWindowSize(150, 50);
+                Console.BufferHeight = 500;
+                Console.BufferWidth = 500;
+                Console.CursorLeft = 40;
+                Console.CursorSize = 100;
+                Console.CursorTop = 40;
+                Console.CursorVisible = false;
+
+
+
+
                 // the head
                 Console.Clear();
                 Console.WriteLine(@"██████╗  █████╗ ███████╗███████╗██╗    ██╗ ██████╗ ██████╗ ██████╗      ██████╗ ███████╗███╗   ██╗███████╗██████╗  █████╗ ████████╗ ██████╗ ██████╗");
