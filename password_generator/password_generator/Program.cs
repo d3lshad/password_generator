@@ -62,6 +62,26 @@ namespace password_generator
                 Console.WriteLine("**        Programmed by D3lsh4d        **");
                 Console.WriteLine("*****************************************");
 
+                // few modifiable questions 
+                AskInt("How long would you like your password to be", ref length, 1, 30);
+                AskInt("How many passwords would you like to generate", ref numberOfPass, 1, 20);
+
+                if (!ASCII)
+                {
+                    Console.WriteLine();
+                    AskBool("uppercase characters", ref uppercase);
+                    AskBool("lowercase characters", ref lowercase);
+                    AskBool("numbers", ref num);
+                    AskBool("symbols", ref sym);
+                }
+
+                generatePassword(ASCII, uppercase, lowercase, num, sym, length, numberOfPass);
+                AskBool("this tool again", ref again);
+
+
             }
+            Console.WriteLine("Goodbye!");
         }
+
+    }
 }
